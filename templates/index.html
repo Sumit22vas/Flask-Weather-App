@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{url_for('static',filename='styles/bootstrap.min.css')}}">
+    <link href="{{ url_for('static',filename='styles/main.css') }}" rel="stylesheet"/>
+    <title>Get Current Weather Data</title>
+  </head>
+  <body>
+    <h1 class="mt-3">***** Get Current Weather *****</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 offset-md-4 mt-5">
+                <!-- Alert display area -->
+                <div id="alert_area">
+
+                </div>
+                <!-- Form for city input -->
+                <div id="user_form">
+                    <form>
+                        <!-- form input -->
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="city" placeholder="City Name">
+                            <label for="city">City Name</label>
+                        </div>
+                        <!-- button -->
+                        <div class="d-grid gap-2 col-4 mx-auto mt-3">
+                            <button class="btn btn-warning" type="button" id="submitBtn">Submit</button>
+                        </div>
+                        <!-- result rendering area -->
+                        <div class="mt-5" id="result_render_area">
+                            
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/main.js')}}"></script>
+  </body>
+</html>
